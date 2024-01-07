@@ -1,0 +1,29 @@
+GAD: The Genetic Association Database Assignment
+The goal of this assignment is to research and explore the GAD database to re-discover some possible biological
+connections between seemingly disparate diseases. The GAD database is a simple catalog of research papers reporting an association
+or lack of association between genes and disease. 
+The gad table has the following columns:
+  gad_id – The table’s primary key 
+  association – Whether there is a positive association (‘Y’) or not (‘N’) or it is uncertain (‘ ‘)
+  phenotype – The name of the disease or condition
+  disease_class – The disease class (e.g., NEUROLOGICAL)
+  chromosome – The human chromosome where the gene can be found (1, 2, 3, ..., 22, X, Y, M) 
+  chromosome_band – A descriptor for the chromosomal region
+  dna_start – The nucleotide position on the chromosome where the gene begins
+  dna_end – The nucleotide position on the chromosome the gene ends
+  gene – The official gene symbol
+  gene_name – The gene’s full name
+  reference – The research paper where the association was reported
+  pubmed_id – The Pubmed ID (https://pubmed.ncbi.nlm.nih.gov)
+  year – Year of the publication
+  population – The population associated with the research study that reported the association.
+
+The GAD table may contain inconsistent spelling or punctuation. Some columns contain lists of values rather than single values. 
+The GAD database data is not normalized. 
+
+PART A:
+Write SQL Queries to answer the 13 questions within the sql file. 
+
+PART B:
+Explore the GAD database to research and investigate a possible question regarding the information in the database. 
+Create a powerpoint slide with graphs or charts derived from the data created to help support your findings. 
