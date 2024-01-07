@@ -1,0 +1,34 @@
+Adverse Drug Events Assignment
+The goal of this assignment is to identify Adverse Drug Events (ADE) that can occur if a drug is improperly prescribed,
+or two drugs taken together have an unintended and possibly serious side-effects. Over two million ADEs are reported 
+annually resulting in more than 100,000 deaths, so avoiding ADEs is a major healthcare priority. 
+
+ASSIGNEMTN SPECIFICATIONS:
+1) Run the ade_setup in a root connection to build a new database called ade
+2) Create a SQL file that implements the stored procedure called prescribe. This procedure adds a new prescription record. 
+It takes the parameters: 
+  a) Patient Name, 
+  b) Doctor’s Name, 
+  c) Medication Name,
+  d) Number of Pills prescribed per day
+The date assigned will be the current date and time. 
+
+For the prescription to be accepted, the patient must meet the following guidelines of the medication:
+1) If patient is under 12 years old and the medication isn’t indicated for children under 12, reject the prescription 
+  with the following error message:
+  <medication_name> cannot be prescribed to children under 12.
+
+2) If the patient is pregnant, don’t allow a prescription for a medication that shouldn’t be taken when pregnant. 
+  Reject the prescription with the following message:
+  <medication_name> cannot be prescribed to pregnant women.
+
+3) If you detect a potential drug interaction, reject the prescription with the following error message: 
+  <medication_name> interacts with <current_medication> currently prescribed to <patient_name>.
+
+4) Add a trigger that responds to a patient becoming pregnant. It should add a recommendation: 
+  “Take pre-natal vitamins”. If the patient is currently taking any medications that shouldn’t be taken when pregnant, 
+  automatically delete these prescriptions. Once the patient is no longer pregnant, remove the pre-natal vitamin 
+  recommendation. You don’t need to add back in any deleted prescriptions.
+
+5) At the bottom of the ade_start.sql script you will find some test cases to help you validate
+your code.
